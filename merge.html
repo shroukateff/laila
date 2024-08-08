@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .percentage-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #e0e0e0;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .percentage-fill {
+            height: 100%;
+            background-color: #4caf50;
+            width: 0;
+            transition: width 0.5s;
+        }
+
+        #percentage-text {
+            font-size: 1.2em;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Data Table with Checkboxes</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th rowspan="0">Construction Project Phases</th>
+                    <th rowspan="0">LEED Categories</th>
+                    <th colspan="2">Materials</th>
+                    <th colspan="1">Water Efficiency</th>
+                    <th colspan="2">Energy and Atmosphere</th>
+                    <th colspan="4">Indoor Environmental Quality</th>
+                    <th colspan="3">Sustainable Site</th>
+                    <th colspan="1">Location and Transportation</th>
+                    <th colspan="2">Integrative Process, Planning & Assessments</th>
+                </tr>
+                <tr>
+                    <th>Waste Performance</th>
+                    <th>Embodied Carbon</th>
+                    <th>Water Performance</th>
+                    <th>Decarbonization and Efficiency Plans</th>
+                    <th>GHG Emission Reduction</th>
+                    <th>Indoor Quality Performance</th>
+                    <th>Occupant Satisfaction Survey</th>
+                    <th>Green Cleaning</th>
+                    <th>Integrated Pest Management</th>
+                    <th>Rainwater Management</th>
+                    <th>Heat Island Reduction</th>
+                    <th>Light Pollution and Bird Collision Reduction</th>
+                    <th>Sustainable Transportation Performance</th>
+                    <th>Operational Planning and Response for Resilience</th>
+                    <th>Equity within Operations and Maintenance Staff</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Initial Phase (Planning and Feasibility)</td>
+                    <td>Materials</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.1"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.1"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.1"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                </tr>
+                <tr>
+                    <td>Energy</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.1"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.1"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.1"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                </tr>
+                <!-- Add more rows here based on the data from your table -->
+            </tbody>
+        </table>
+        <button id="calculate-button">Calculate Selected Percentage</button>
+        <div class="graph">
+            <h2>Selected Percentage</h2>
+            <div class="percentage-bar">
+                <div class="percentage-fill" id="percentage-fill"></div>
+            </div>
+            <p id="percentage-text">0%</p>
+        </div>
+        <button id="back-button">Back</button>
+    </div>
+    <script>
+        // JavaScript code
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = document.querySelectorAll('.option');
+            const percentageFill = document.getElementById('percentage-fill');
+            const percentageText = document.getElementById('percentage-text');
+            const calculateButton = document.getElementById('calculate-button');
+            const backButton = document.getElementById('back-button');
+
+            function updatePercentage() {
+                let totalPercentage = 0;
+                options.forEach(option => {
+                    if (option.checked) {
+                        totalPercentage += parseFloat(option.getAttribute('data-percentage'));
+                    }
+                });
+
+                totalPercentage = Math.min(totalPercentage, 100); // Cap at 100%
+                percentageFill.style.width = totalPercentage + '%';
+                percentageText.textContent = totalPercentage + '%';
+            }
+
+            calculateButton.addEventListener('click', updatePercentage);
+
+            backButton.addEventListener('click', () => {
+                window.location.href = 'home.html';
+            });
+        });
+    </script>
+</body>
+</html>
