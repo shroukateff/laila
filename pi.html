@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Percentage Certified</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .chart-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        canvas {
+            max-width: 100%;
+        }
+        .indications {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .indication {
+            color: #666;
+        }
+        .high {
+            color: #4caf50;
+        }
+        .medium {
+            color: #ff9800;
+        }
+        .low {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h2>Total Percentage Certified</h2>
+    <div class="chart-container">
+        <canvas id="myPieChart"></canvas>
+    </div>
+    <div class="indications">
+        <p class="indication high">High (80% and above)</p>
+        <p class="indication medium">Medium (50% to 79%)</p>
+        <p class="indication low">Low (Below 50%)</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve the total percentage from localStorage
+            const totalPercentage = localStorage.getItem('page1Total') || '0';
+            const percentage = parseFloat(totalPercentage);
+
+            // Data for the pie chart
+            const data = {
+                labels: ['Credit Points', 'Missed Points'],
+                datasets: [{
+                    data: [percentage, 100 - percentage],
+                    backgroundColor: [
+                        percentage >= 80 ? '#4caf50' : (percentage >= 50 ? '#ff9800' : '#f44336'), // Color based on percentage
+                        '#e0e0e0'
+                    ],
+                    borderWidth: 1
+                }]
+            };
+
+            // Configuration for the pie chart
+            const config = {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    const label = tooltipItem.label || '';
+                                    return `${label}: ${tooltipItem.raw.toFixed(2)}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            // Create the pie chart
+            const ctx = document.getElementById('myPieChart').getContext('2d');
+            new Chart(ctx, config);
+        });
+    </script>
+</body>
+</html>

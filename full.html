@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDP/LEED Framework</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu" onclick="toggleSidebar()">
+        <div class="menu-bars"></div>
+        <div class="menu-bars"></div>
+        <div class="menu-bars"></div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+            <a href="home.html">Home</a>
+            <a href="full.html">Checklist</a>
+            <a href="design.html">Analysis</a>
+        </div>
+    </div>
+  
+    <div class="container">
+        <h2>IDP and LEED scorecard for Sustainable built Environment</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th rowspan="0">Construction Project Phases</th>
+                    <th rowspan="0">LEED Categories</th>
+                    <th colspan="2">Materials</th>
+                    <th colspan="1">Water Efficiency</th>
+                    <th colspan="2">Energy and Atmosphere</th>
+                    <th colspan="4">Indoor Environmental Quality</th>
+                    <th colspan="3">Sustainable Site</th>
+                    <th colspan="1">Location and Transportation</th>
+                    <th colspan="2">Integrative Process, Planning & Assessments</th>
+                </tr>
+                <tr>
+                    <th>Waste Performance</th>
+                    <th>Embodied Carbon</th>
+                    <th>Water Performance</th>
+                    <th>Decarbonization and Efficiency Plans</th>
+                    <th>GHG Emission Reduction</th>
+                    <th>Indoor Quality Performance</th>
+                    <th>Occupant Satisfaction Survey</th>
+                    <th>Green Cleaning</th>
+                    <th>Integrated Pest Management</th>
+                    <th>Rainwater Management</th>
+                    <th>Heat Island Reduction</th>
+                    <th>Light Pollution and Bird Collision Reduction</th>
+                    <th>Sustainable Transportation Performance</th>
+                    <th>Operational Planning and Response for Resilience</th>
+                    <th>Equity within Operations and Maintenance Staff</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <!-- Row for Initial phase -->
+                <tr class="phase1">
+                    <td rowspan="8">Initial Phase (Planning and Feasibility)</td>
+                    <td>Materials</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.130"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.4"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.008"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+           
+</tr>
+                
+<tr class="phase1">
+                    <td>Ventilation</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.2"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.008"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                </tr>
+                <tr class="phase1">
+                    <td>Efficient water use</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.30"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                </tr>
+                <tr class="phase1">
+                    <td>Energy</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.150"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.20"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.100"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.008"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                </tr>
+                <tr class="phase1">
+                    <td>Indoor quality</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.008"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                </tr>
+                <tr class="phase1">
+                    <td>Sustainable site</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.297"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.008"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                </tr>
+                <tr class="phase1">
+                    <td>Lighting</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.05"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                </tr>
+                <tr class="phase1">
+                    <td>Context and Transportation</td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.323"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.006"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.008"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="1"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    
+
+
+                        </tr>
+                
+                    <tr id="total-row1">
+    <td colspan="2"><strong>Total</strong></td>
+    <td id="total-materials"></td>
+    <td id="total-water-efficiency"></td>
+    <td id="total-decarbonization"></td>
+    <td id="total-ghg-emission"></td>
+    <td id="total-indoor-quality"></td>
+    <td id="total-occupant-satisfaction"></td>
+    <td id="total-green-cleaning"></td>
+    <td id="total-integrated-pest-management"></td>
+    <td id="total-rainwater-management"></td>
+    <td id="total-heat-island-reduction"></td>
+    <td id="total-light-pollution"></td>
+    <td id="total-sustainable-transportation"></td>
+    <td id="total-operational-planning"></td>
+    <td id="total-equity"></td>
+    <td id="total-operational-planning-alt"></td>
+</tr>
+
+                    <tr class="phase2">
+                        <td rowspan="8">Design Phase</td>
+                        <td>Materials</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.350"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.400"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    </tr>
+                    <tr class="phase2">
+                        <td>Ventilation</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    </tr>
+                    <tr class="phase2">
+                        <td>Efficient water use</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.150"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="1.00"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.80"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    </tr>
+                    <tr class="phase2">
+                        <td>Energy</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.150"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.50"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    </tr>
+                    <tr class="phase2">
+                        <td>Indoor quality</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="2.000"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    </tr>
+                    <tr class="phase2">
+                        <td>Sustainable site</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    </tr>
+                    <tr class="phase2">
+                        <td>Lighting</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.260"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.1"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                    </tr>
+                    <tr class="phase2">
+                        <td>Context and Transportation</td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.016"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="3"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                        <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        <tbody>
+                            <!-- Existing rows -->
+                            <!-- ... -->
+                        
+                            <!-- Total Row -->
+    
+                            </tr>
+                        </tbody>
+                        <tr id="total-row2">
+                            <td colspan="2"><strong>Total</strong></td>
+                            <td></td> <!-- Placeholder for Materials -->
+                            <td></td> <!-- Placeholder for Water Efficiency -->
+                            <td></td> <!-- Placeholder for Decarbonization -->
+                            <td></td> <!-- Placeholder for GHG Emission Reduction -->
+                            <td></td> <!-- Placeholder for Indoor Quality Performance -->
+                            <td></td> <!-- Placeholder for Occupant Satisfaction -->
+                            <td></td> <!-- Placeholder for Green Cleaning -->
+                            <td></td> <!-- Placeholder for Integrated Pest Management -->
+                            <td></td> <!-- Placeholder for Rainwater Management -->
+                            <td></td> <!-- Placeholder for Heat Island Reduction -->
+                            <td></td> <!-- Placeholder for Light Pollution -->
+                            <td></td> <!-- Placeholder for Sustainable Transportation -->
+                            <td></td> <!-- Placeholder for Operational Planning -->
+                            <td></td> <!-- Placeholder for Equity -->
+                            <td></td> <!-- Placeholder for Operational Planning -->
+                          
+                        </tr>
+                        <tr class="phase3">
+                            <td rowspan="8">Construction Phase</td>
+                            <td>Materials</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.600"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.5"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="1"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        </tr>
+                        <tr class="phase3">
+                            <td>Ventilation</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.100"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.5"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="1.00"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        </tr>
+                        <tr class="phase3">
+                            <td>Efficient water use</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="3.00"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        </tr>
+                        <tr class="phase3">
+                            <td>Energy</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.400"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="1.00"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        </tr>
+                        <tr class="phase3">
+                            <td>Indoor quality</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="2.00"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        </tr>
+                        <tr class="phase3">
+                            <td>Sustainable site</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0075"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        </tr>
+                        <tr class="phase3">
+                            <td>Lighting</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0025"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.3"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                        </tr>
+                        <tr class="phase3">
+                            <td>Context and Transportation</td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.300"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0.0075"> </label></td>
+                            <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                            <tbody>
+                                <!-- Existing rows -->
+                                <!-- ... -->
+                            
+                                <!-- Total Row -->
+        
+                                </tr>
+                            </tbody>
+                            <tr id="total-row3">
+                                <td colspan="2"><strong>Total</strong></td>
+                                <td></td> <!-- Placeholder for Materials -->
+                                <td></td> <!-- Placeholder for Water Efficiency -->
+                                <td></td> <!-- Placeholder for Decarbonization -->
+                                <td></td> <!-- Placeholder for GHG Emission Reduction -->
+                                <td></td> <!-- Placeholder for Indoor Quality Performance -->
+                                <td></td> <!-- Placeholder for Occupant Satisfaction -->
+                                <td></td> <!-- Placeholder for Green Cleaning -->
+                                <td></td> <!-- Placeholder for Integrated Pest Management -->
+                                <td></td> <!-- Placeholder for Rainwater Management -->
+                                <td></td> <!-- Placeholder for Heat Island Reduction -->
+                                <td></td> <!-- Placeholder for Light Pollution -->
+                                <td></td> <!-- Placeholder for Sustainable Transportation -->
+                                <td></td> <!-- Placeholder for Operational Planning -->
+                                <td></td> <!-- Placeholder for Equity -->
+                                <td></td> <!-- Placeholder for Operational Planning -->
+                              
+                            </tr>
+                            <tr class="phase4">
+                                <td rowspan="8">Operation and maintainance Phase</td>
+                                <td>Materials</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.120"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.600"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="1.00"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.200"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.420"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                            </tr>
+                            <tr class="phase4">
+                                <td>Ventilation</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.200"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.420"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                            </tr>
+                            <tr class="phase4">
+                                <td>Efficient water use</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.525"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="4.00"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.429"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                            </tr>
+                            <tr class="phase4">
+                                <td>Energy</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.900"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="1.00"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.100"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.420"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                            </tr>
+                            <tr class="phase4">
+                                <td>Indoor quality</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.420"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                            </tr>
+                            <tr class="phase4">
+                                <td>Sustainable site</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.0075"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                            </tr>
+                            <tr class="phase4">
+                                <td>Lighting</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.500"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.420"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.3"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                            </tr>
+                            <tr class="phase4">
+                                <td>Context and Transportation</td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.080"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.125"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="1"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.0075"> </label></td>
+                                <td><label><input type="checkbox" class="option" data-percentage="0.333"> </label></td>
+                                <tbody>
+                                    <!-- Existing rows -->
+                                    <!-- ... -->
+                                
+                                    <!-- Total Row -->
+            
+                                    </tr>
+                                </tbody>
+                                <tr id="total-row4">
+                                    <td colspan="2"><strong>Total</strong></td>
+                                    <td></td> <!-- Placeholder for Materials -->
+                                    <td></td> <!-- Placeholder for Water Efficiency -->
+                                    <td></td> <!-- Placeholder for Decarbonization -->
+                                    <td></td> <!-- Placeholder for GHG Emission Reduction -->
+                                    <td></td> <!-- Placeholder for Indoor Quality Performance -->
+                                    <td></td> <!-- Placeholder for Occupant Satisfaction -->
+                                    <td></td> <!-- Placeholder for Green Cleaning -->
+                                    <td></td> <!-- Placeholder for Integrated Pest Management -->
+                                    <td></td> <!-- Placeholder for Rainwater Management -->
+                                    <td></td> <!-- Placeholder for Heat Island Reduction -->
+                                    <td></td> <!-- Placeholder for Light Pollution -->
+                                    <td></td> <!-- Placeholder for Sustainable Transportation -->
+                                    <td></td> <!-- Placeholder for Operational Planning -->
+                                    <td></td> <!-- Placeholder for Equity -->
+                                    <td></td> <!-- Placeholder for Operational Planning -->
+                                  
+                                </tr>
+                                <tr class="phase5">
+                                    <td rowspan="8">End of lifecycle Phase</td>
+                                    <td>Materials</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.400"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.300"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.10"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.400"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.003"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0."> </label></td>
+                                </tr>
+                                <tr class="phase5">
+                                    <td>Ventilation</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.63"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.400"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.003"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                </tr>
+                                <tr class="phase5">
+                                    <td>Efficient water use</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.30"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.003"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                </tr>
+                                <tr class="phase5">
+                                    <td>Energy</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.300"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.10"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.200"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.003"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                </tr>
+                                <tr class="phase5">
+                                    <td>Indoor quality</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.63"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="1.00"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.003"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.03"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                </tr>
+                                <tr class="phase5">
+                                    <td>Sustainable site</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.200"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.0075"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                </tr>
+                                <tr class="phase5">
+                                    <td>Lighting</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.025"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.003"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.25"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                </tr>
+                                <tr class="phase5">
+                                    <td>Context and Transportation</td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.100"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.063"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.250"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.004"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.001"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.050"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="2"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0.0075"> </label></td>
+                                    <td><label><input type="checkbox" class="option" data-percentage="0"> </label></td>
+                                    <tbody>
+                                        <!-- Existing rows -->
+                                        <!-- ... -->
+                                    
+                                        <!-- Total Row -->
+                
+                                        </tr>
+                                    </tbody>
+                                    <tr id="total-row5">
+                                        <td colspan="2"><strong>Total</strong></td>
+                                        <td></td> <!-- Placeholder for Materials -->
+                                        <td></td> <!-- Placeholder for Water Efficiency -->
+                                        <td></td> <!-- Placeholder for Decarbonization -->
+                                        <td></td> <!-- Placeholder for GHG Emission Reduction -->
+                                        <td></td> <!-- Placeholder for Indoor Quality Performance -->
+                                        <td></td> <!-- Placeholder for Occupant Satisfaction -->
+                                        <td></td> <!-- Placeholder for Green Cleaning -->
+                                        <td></td> <!-- Placeholder for Integrated Pest Management -->
+                                        <td></td> <!-- Placeholder for Rainwater Management -->
+                                        <td></td> <!-- Placeholder for Heat Island Reduction -->
+                                        <td></td> <!-- Placeholder for Light Pollution -->
+                                        <td></td> <!-- Placeholder for Sustainable Transportation -->
+                                        <td></td> <!-- Placeholder for Operational Planning -->
+                                        <td></td> <!-- Placeholder for Equity -->
+                                        <td></td> <!-- Placeholder for Operational Planning -->
+                                      
+                                    </tr>
+                        <tr id="phases-total-row">
+                            <td colspan="2"><strong>Phases Total</strong></td>
+                            <td></td> <!-- Placeholder for Materials -->
+                            <td></td> <!-- Placeholder for Water Efficiency -->
+                            <td></td> <!-- Placeholder for Decarbonization -->
+                            <td></td> <!-- Placeholder for GHG Emission Reduction -->
+                            <td></td> <!-- Placeholder for Indoor Quality Performance -->
+                            <td></td> <!-- Placeholder for Occupant Satisfaction -->
+                            <td></td> <!-- Placeholder for Green Cleaning -->
+                            <td></td> <!-- Placeholder for Integrated Pest Management -->
+                            <td></td> <!-- Placeholder for Rainwater Management -->
+                            <td></td> <!-- Placeholder for Heat Island Reduction -->
+                            <td></td> <!-- Placeholder for Light Pollution -->
+                            <td></td> <!-- Placeholder for Sustainable Transportation -->
+                            <td></td> <!-- Placeholder for Operational Planning -->
+                            <td></td> <!-- Placeholder for Equity -->
+                            <td></td> <!-- Placeholder for Operational Planning -->
+                        </tr>
+            </table>
+            <button id="select-all-button">Select All</button>
+
+            <div class="graph">
+                <h2>Total Percentage Certified</h2>
+                <div class="percentage-bar">
+                    <div class="percentage-fill" id="percentage-fill"></div>
+                </div>
+                <p id="percentage-text">0%</p>
+            </div>
+        <button id="next-button">Next</button>
+    </div>
+    <script src="data.js"></script>
+</body>
+</html>

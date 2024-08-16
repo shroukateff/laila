@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Percentage Certified</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between charts */
+            flex-wrap: wrap;
+        }
+        .graph {
+            margin: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .percentage-bar {
+            background-color: #eee;
+            border-radius: 25px;
+            height: 30px;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+        .percentage-fill {
+            background-color: #4caf50;
+            height: 100%;
+            border-radius: 25px;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+        .percentage-text {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .indications {
+            margin-top: 20px;
+            margin-left: 40%;
+            font-size: 1.2em;
+        }
+        .indication {
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between icon and text */
+            margin: 5px 0;
+        }
+        .high {
+            color: #f5f04e;
+        }
+        .medium {
+            color: #54514f;
+        }
+        .low {
+            color: #69f42d;
+        }
+        .blue {
+            color: #1123e7;
+        }
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .charts {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Space between bar and pie chart */
+        }
+        /* Font Awesome icon styles */
+
+        .indication img {
+            width: 50px; /* Adjust size as needed to match small icon size */
+            height: auto;
+        }
+        .indication.high img {
+            width: 60px; /* Adjust size as needed to match small icon size */
+            height: auto;
+            
+        }
+        .indication.medium img {
+            width: 40px; /* Adjust size as needed to match small icon size */
+            height: auto;
+            
+        }
+        .menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-bars {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1;
+}
+.sidebar.open {
+    right: 0;
+}
+.sidebar-menu {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar-menu a {
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+.sidebar-menu a:hover {
+    background-color: #f0f0f0;
+}
+    </style>
+    <!-- Include Font Awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="menu" onclick="toggleSidebar()">
+        <div class="menu-bars"></div>
+        <div class="menu-bars"></div>
+        <div class="menu-bars"></div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+            <a href="home.html">Home</a>
+            <a href="full.html">Checklist</a>
+            <a href="design.html">Analysis</a>
+        </div>
+    </div>
+
+  
+    <div class="chart-container">
+        <div class="charts">
+            <!-- Bar chart -->
+            <div class="graph">
+                <h2>Points Breakdown</h2>
+                <canvas id="barChart" width="400" height="400"></canvas>
+            </div>
+            <!-- Pie chart -->
+            <div class="graph">
+                <h2>Point Distribution</h2>
+                <canvas id="pointsChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+        <!-- Percentage bar -->
+        <div class="graph">
+            <h2>Total Percentage Certified</h2>
+            <div class="percentage-bar">
+                <div class="percentage-fill" id="percentage-fill"></div>
+            </div>
+            <p class="percentage-text" id="percentage-text">0%</p>
+        </div>
+    </div>
+    <div class="indications">
+        <p class="indication medium"><img src="silver.png" alt="Platinum Icon"> Platinum (80% and Above)</p>
+        <p class="indication high"><img src="x.png" alt="Gold Icon"> Gold (60% to 79%)</p>
+        <p class="indication blue"><img src="blue.png" alt="Silver Icon"> Silver (50% to 59%)</p>
+        <p class="indication low"><img src="green.png" alt="Certified Icon"> Certified (From 40% to 49%)</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve stored value from localStorage
+            const totalPercentage = parseFloat(localStorage.getItem('page1Total')) || 0;
+
+            // Set the credit and missed points as the total percentage
+            const creditPointsTotal = totalPercentage;
+            const missedPointsTotal = 100 - totalPercentage;
+
+            // Update the percentage bar and text
+            const percentageText = document.getElementById('percentage-text');
+            const percentageFill = document.getElementById('percentage-fill');
+            percentageText.textContent = `${totalPercentage.toFixed(3)}%`;
+            percentageFill.style.width = `${totalPercentage.toFixed(3)}%`;
+
+            // Determine color based on percentage
+            if (totalPercentage >= 80) {
+                percentageFill.style.backgroundColor = '#E5E4E2'; // High
+            } else if (totalPercentage >= 50) {
+                percentageFill.style.backgroundColor = '#ff9800'; // Medium
+            } else {
+                percentageFill.style.backgroundColor = '#f44336'; // Low
+            }
+
+            // Chart.js Pie Chart
+            const pieCtx = document.getElementById('pointsChart').getContext('2d');
+            if (pieCtx) {
+                new Chart(pieCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Credit Points', 'Missed Points'],
+                        datasets: [{
+                            data: [creditPointsTotal, missedPointsTotal],
+                            backgroundColor: ['#4caf50', '#f44336'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(tooltipItem) {
+                                        return `${tooltipItem.label}: ${tooltipItem.raw.toFixed(3)}`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            } else {
+                console.error('Pie Chart canvas not found');
+            }
+
+            // Chart.js Bar Chart
+            const barCtx = document.getElementById('barChart').getContext('2d');
+            if (barCtx) {
+                new Chart(barCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Credit Points', 'Missed Points'],
+                        datasets: [{
+                            label: 'Points',
+                            data: [creditPointsTotal, missedPointsTotal],
+                            backgroundColor: ['#4caf50', '#f44336'],
+                            borderColor: ['#388e3c', '#c62828'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value.toFixed(3);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            } else {
+                console.error('Bar Chart canvas not found');
+            }
+        });
+        function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('open');
+}
+
+function highlightImage(bulletNumber) {
+    const images = document.querySelectorAll('.image-container img');
+    images.forEach(image => image.classList.remove('active'));
+    const selectedImage = document.getElementById(`image${bulletNumber}`);
+    selectedImage.classList.add('active');
+}
+
+// Close the sidebar when clicking outside of it
+document.addEventListener('click', function(event) {
+    const sidebar = document.getElementById('sidebar');
+    const menu = document.querySelector('.menu');
+    if (!sidebar.contains(event.target) && !menu.contains(event.target)) {
+        sidebar.classList.remove('open');
+    }
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certify Green Residential House</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow-x: hidden;
+            padding: 10px;
+            background-image: url('sss.jpeg'); /* Replace with your image path */
+            background-size: cover; /* Adjusts the image size to cover the entire element */
+            transform: translateY(-20px); 
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        .button-container {
+            margin: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-left: 170px;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .menu-bars {
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 6px 0;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: right 0.3s ease;
+            z-index: 1;
+        }
+        .sidebar.open {
+            right: 0;
+        }
+        .sidebar-menu {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar-menu a {
+            display: block;
+            padding: 15px 0;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+        .sidebar-menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .info-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    position: relative; /* Make sure it's positioned correctly */
+}
+        .info-list {
+            flex: 1;
+        }
+        .info-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info-list li {
+            margin: 40px 0;
+            margin-left: 10px;
+            display: flex;
+            font-size: large;
+            align-items: center;
+        }
+        .info-list-container {
+            background-color: rgba(255, 255, 255, 0.979); /* White with 80% opacity */
+            padding: 20px; /* Adds space inside the box */
+            border-radius: 10px; /* Rounds the corners of the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+            margin-left: 100px; /* Aligns with your list's margin-left */
+            max-width: 500px; /* Limits the width of the box */
+        }
+
+        .info-list li .circle {
+            margin-right: 10px;
+        }
+        .points {
+            display: flex;
+            flex-direction: column;
+            margin-left: 300px;
+        }
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+        .circle:hover {
+            background-color: #ddd;
+        }
+        .image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "top-left top-right"
+        "middle-left middle-right"
+        "bottom-left bottom-right";
+    gap: 1px;
+    position: relative; /* Ensure positioning is relative */
+    left: 300px; /* Move the entire container to the right */
+    height: 300px; /* Adjust based on the height of your design */
+}
+
+.image-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s; /* Add transition for transform */
+    grid-area: auto;
+    transform: translateY(-100px); /* Move images up by 10px */
+}
+
+#image1 {
+    grid-area: top-left;
+}
+
+#image2 {
+    grid-area: middle-right;
+}
+
+#image3 {
+    grid-area: bottom-left;
+}
+
+.image-container img.active {
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <h1>IDP/SBE - Certify Green Residential House</h1>
+    <div class="button-container">
+        <a href="full.html" class="button">Certify A Project</a>
+    </div>
+    
+    <div class="menu" onclick="toggleSidebar()">
+        <div class="menu-bars"></div>
+        <div class="menu-bars"></div>
+        <div class="menu-bars"></div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+            <a href="home.html">Home</a>
+            <a href="full.html">Checklist</a>
+            <a href="design.html">Analysis</a>
+        </div>
+    </div>
+    <div class="info-container">
+        <div class="info-list-container">
+            <div class="info-list">
+                <ul id="info-list">
+                    <li id="bullet1"><div class="circle" onmouseover="highlightImage(1)">1</div>Input your Project estimations</li>
+                    <li id="bullet2"><div class="circle" onmouseover="highlightImage(2)">2</div>Meet the LEED Standard</li>
+                    <li id="bullet3"><div class="circle" onmouseover="highlightImage(3)">3</div>Certify your Project</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="1.svg" id="image1" alt="Image 1">
+            <img src="2.svg" id="image2" alt="Image 2">
+            <img src="3.svg" id="image3" alt="Image 3">
+        </div>
+    </div>
+    
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        function highlightImage(bulletNumber) {
+            const images = document.querySelectorAll('.image-container img');
+            images.forEach(image => image.classList.remove('active'));
+            const selectedImage = document.getElementById(`image${bulletNumber}`);
+            selectedImage.classList.add('active');
+        }
+
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menu = document.querySelector('.menu');
+            if (!sidebar.contains(event.target) && !menu.contains(event.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
